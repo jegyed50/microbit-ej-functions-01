@@ -1,5 +1,5 @@
 {
-    "name": "microbit-ej-functions-01",
+    "name": "microbit-ej-ext-functions-01",
     "description": "",
     "dependencies": {
         "core": "*",
