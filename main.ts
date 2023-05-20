@@ -61,6 +61,7 @@ function ShowNumber (Number2: number, ShowTimeOneDigit: number, PauseBetweenDigi
 function pause_sec (secs_value: number) {
     basic.pause(1000 * secs_value)
 }
+//microbit-ej-ext-functions-01
 let NumberToText = ""
 let valtozofenyesseg3 = 0
 let currentledbrightness = 0
