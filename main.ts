@@ -1,4 +1,7 @@
-function pause_hours (hours_value: number) {
+function pause_min (mins_value: number) {
+    basic.pause(1000 * 60 * mins_value)
+}
+function pause_hour (hours_value: number) {
     basic.pause(1000 * (602 * 60 * hours_value))
 }
 function ShowText (text: string, ShowTimeOneLetter: number, PauseBetweenLetters: number) {
@@ -55,10 +58,7 @@ function ShowNumber (Number2: number, ShowTimeOneDigit: number, PauseBetweenDigi
     NumberToText = convertToText(Number2)
     ShowText(NumberToText, 200, 150)
 }
-function pause_mins (mins_value: number) {
-    basic.pause(1000 * 60 * mins_value)
-}
-function pause_secs (secs_value: number) {
+function pause_sec (secs_value: number) {
     basic.pause(1000 * secs_value)
 }
 let NumberToText = ""
@@ -68,16 +68,17 @@ let CurrentLetter = ""
 let CurrentLetterIndex2 = 0
 let CurrentLetterIndex = 0
 let currentledbrightness2 = 0
+basic.pause(100)
 basic.showIcon(IconNames.Heart)
-pause_secs(5)
+pause_sec(5)
 basic.clearScreen()
-pause_secs(1)
+pause_sec(1)
 basic.showIcon(IconNames.Heart)
-pause_mins(1)
+pause_min(1)
 basic.clearScreen()
-pause_secs(1)
+pause_sec(1)
 basic.showIcon(IconNames.Heart)
-pause_hours(1)
+pause_hour(1)
 basic.showIcon(IconNames.No)
 basic.forever(function () {
 	
