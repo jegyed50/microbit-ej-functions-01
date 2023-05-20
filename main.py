@@ -13,11 +13,16 @@ def on_button_pressed_a():
     ShowText("abc", 200, 150)
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
-def on_button_pressed_b():
+def on_button_pressed_ab():
     ShowNumber(123, 200, 150)
+input.on_button_pressed(Button.AB, on_button_pressed_ab)
+
+def on_button_pressed_b():
+    ShowText(convert_to_text(123), 200, 150)
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
 def ej_screensaver(switch_off_LED_max_brightness: number, fade_delay: number):
+    global currentledbrightness, valtozofenyesseg3
     while True:
         for x in range(5):
             for y in range(5):
@@ -44,6 +49,8 @@ def ShowNumber(Number2: number, ShowTimeOneDigit: number, PauseBetweenDigits: nu
     NumberToText = convert_to_text(Number2)
     ShowText(NumberToText, 200, 150)
 NumberToText = ""
+valtozofenyesseg3 = 0
+currentledbrightness = 0
 CurrentLetter = ""
 CurrentLetterIndex2 = 0
 CurrentLetterIndex = 0
@@ -55,5 +62,5 @@ def on_forever():
 basic.forever(on_forever)
 
 def on_in_background():
-    ej_screensaver(255, 2)
+    ej_screensaver(124, 2)
 control.in_background(on_in_background)

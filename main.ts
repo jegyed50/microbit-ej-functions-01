@@ -1,3 +1,6 @@
+function pause_hours (hours_value: number) {
+    basic.pause(1000 * (602 * 60 * hours_value))
+}
 function ShowText (text: string, ShowTimeOneLetter: number, PauseBetweenLetters: number) {
     CurrentLetterIndex = 0
     while (CurrentLetterIndex2 <= text.length) {
@@ -52,6 +55,12 @@ function ShowNumber (Number2: number, ShowTimeOneDigit: number, PauseBetweenDigi
     NumberToText = convertToText(Number2)
     ShowText(NumberToText, 200, 150)
 }
+function pause_mins (mins_value: number) {
+    basic.pause(1000 * 60 * mins_value)
+}
+function pause_secs (secs_value: number) {
+    basic.pause(1000 * secs_value)
+}
 let NumberToText = ""
 let valtozofenyesseg3 = 0
 let currentledbrightness = 0
@@ -60,9 +69,19 @@ let CurrentLetterIndex2 = 0
 let CurrentLetterIndex = 0
 let currentledbrightness2 = 0
 basic.showIcon(IconNames.Heart)
+pause_secs(5)
+basic.clearScreen()
+pause_secs(1)
+basic.showIcon(IconNames.Heart)
+pause_mins(1)
+basic.clearScreen()
+pause_secs(1)
+basic.showIcon(IconNames.Heart)
+pause_hours(1)
+basic.showIcon(IconNames.No)
 basic.forever(function () {
 	
 })
 control.inBackground(function () {
-	
+    ej_screensaver(124, 2)
 })
